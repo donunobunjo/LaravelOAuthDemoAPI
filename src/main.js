@@ -37,7 +37,8 @@ const router = new VueRouter({
       component:Dashboard,
       beforeEnter:function(to,from,next){
         if (localStorage.getItem('mytoken')==null){
-            next(false)
+            //next(false)
+            next({name:'login'})
         }
         else{
           next()
